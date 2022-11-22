@@ -91,8 +91,8 @@ def format_temperature(temperature):
   return math.floor(temperature)
 
 # 随机颜色
-# def get_random_color():
-#   return "#%06x" % random.randint(0, 0xFFFFFF)
+def get_random_color():
+  return "#%06x" % random.randint(0, 0xFFFFFF)
 
 # 返回一个数组，循环产生变量
 # def split_birthday():
@@ -114,7 +114,7 @@ data = {
   # 城市
   "city": {
     "value": city,
-    "color": get_random_color()
+#     "color": get_random_color()
   },
   # 今天日期
   "date": {
@@ -129,7 +129,7 @@ data = {
   # 天气状况
   "weather": {
     "value": weather['weather'],
-    "color": get_random_color()
+#     "color": get_random_color()
   },
   # 湿度
   "humidity": {
@@ -154,7 +154,7 @@ data = {
   # 温度
   "temperature": {
     "value": math.floor(weather['temp']),
-    "color": get_random_color()
+#     "color": get_random_color()
   },
   # 最高温
   "highest": {
@@ -188,7 +188,7 @@ for index, aim_date in enumerate(split_dates(end_date)):
     key_name = key_name + "_%d" % index
   data[key_name] = {
     "value": get_counter_left(aim_date),
-    "color": get_random_color()
+#     "color": get_random_color()
   }
 
 # 各种正计时
@@ -198,7 +198,7 @@ for index, aim_date in enumerate(split_dates(start_date)):
     key_name = key_name + "_%d" % index
   data[key_name] = {
     "value": get_memorial_days_count(aim_date),
-    "color": get_random_color()
+#     "color": get_random_color()
   }
 
 if __name__ == '__main__':
